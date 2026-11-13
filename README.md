@@ -89,7 +89,7 @@ Saving it with `pickle` and loading it next time takes about 1.5 seconds.
 ## Limits
 
  - **Transfers** Each stop only knows the earliest way to get to destination. Adding a
-  transfer time allows to choose a slightly later bus if its better on long term.
+  transfer time leads to avoid a slightly later bus which was better.
  - **Walking** is approximed from straight line length(x1.3 for streets, at
   4.5 km/h). Short walks could be bound, so late at night the planner can suggest long walks.
  - **Data** Only urban GTT services. In this feed the urban
