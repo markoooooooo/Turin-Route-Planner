@@ -20,9 +20,9 @@ class Walk:
 
 @dataclass(frozen=True, slots=True)
 class Journey:
-    arrival: int
-    legs: tuple[Connection | Walk, ...]
-    settled: int
+    arrival: int # best arrival time of the algorithm
+    legs: tuple[Connection | Walk, ...] # all the pairs of stops, every leg
+    settled: int # best number of stops to arrive at destination
 
 
 def earliest_arrival(graph: Graph, source: str, target: str, t0: int, min_transfer_s: int = 0, heuristic: Callable[[str],float] | None = None) -> Journey | None:
